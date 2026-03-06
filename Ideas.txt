@@ -1,0 +1,15 @@
+Project Name: FitTrack - Simple Exercise Guide
+
+Description:
+A simple fitness website that shows different exercises with instructions.
+Users can browse exercises by category and see how to do each exercise.
+
+Data I will store:
+- Exercises: name, category, difficulty, description, image, duration
+- Categories: strength, cardio, flexibility
+
+Main Features:
+- View all exercises
+- Filter exercises by category
+- Simple and clean design
+- Easy to follow instructions
