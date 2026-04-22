@@ -1,0 +1,81 @@
+<% include('partials/header') %>
+
+<section class="featured">
+    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <h2><%= recipe.title %></h2>
+    <p style="color: #777; font-size: 1.1rem; margin-bottom: 2rem;">
+    <strong>Eldunartími:</strong> <%= recipe.time_minutes %> mínútur
+    </p>
+    </div>
+    <div class="placeholder-img" style="height: 350px; background: linear-gradient(45deg, #f0f0f0, #eaeaea); border-radius: 8px; margin-bottom: 2rem;"></div>
+    <p>Hér munu birtast hráefni og leiðbeiningar í framtíðinni þegar við bætum þeim við gagnagrunninn.</p>
+    <br>
+    <a href="/" class="btn-primary" style="display: inline-block; padding: 0.8rem 1.5rem; background-color: #ff6b6b; color: white; text-decoration: none; border-radius: 50px; font-weight: 500;">
+    Til baka á forsiðu
+    </a>
+    </div>
+</section>
+
+<% include('partials/footer') %>
+
+ % if (recipe.image_url) { %  
+    <div style="  
+    margin-bottom: 2rem;  
+    border-radius: 8px;  
+    overflow: hidden;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    background: #000;  
+    ">  
+    <img  
+    src="<%= recipe.image_url %>"  
+    alt="<%= recipe.title %>"  
+    style="  
+    max-height: 400px;  
+    max-width: 100%;  
+    object-fit: contain;  
+    ">  
+</div>  
+<% } else { %>  
+<div  
+    class="placeholder-img"  
+    style="  
+    height: 350px;  
+    background: linear-gradient(45deg, #f0f0f0, #eaeaea); 
+    border-radius: 8px;  
+    margin-bottom: 2rem;  
+    ">  
+</div>
+<% } %>
+
+<% if (recipe.image_url) { %>
+    <div style="
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    ">
+    <img
+    src="<%= recipe.image_url %>" 
+    alt="<%= recipe.title %>" 
+    style="
+    max-height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+    "
+    />
+    </div>
+<% } else { %>
+    <div class="placeholder-img"
+    style="
+    height: 350px;
+    background: linear-gradient(45deg, #f0f0f0, #eaeaea);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    "
+    />
+<% } %>

@@ -1,8 +1,8 @@
 {
   "name": "loka_verkfni1",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "��#\u0000 \u0000l\u0000o\u0000k\u0000a\u0000_\u0000v\u0000e\u0000r\u0000k\u0000f\u0000n\u0000i\u00001\u0000\r\u0000 \u0000",
+  "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
@@ -15,7 +15,19 @@
   "type": "commonjs",
   "dependencies": {
     "ejs": "^5.0.1",
-    "Express": "^3.0.1",
-    "sass": "^1.97.3"
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayankorbaj1-art/loka_verkfni1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rayankorbaj1-art/loka_verkfni1/issues"
+  },
+  "homepage": "https://github.com/rayankorbaj1-art/loka_verkfni1#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "sass": "^1.98.0"
   }
 }

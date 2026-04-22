@@ -1,0 +1,136 @@
+// public/scss/main.scss
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary, sans-serif;
+    background-color: $sbg-color;
+    color: $text-dark;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading, sans-serif;
+}
+
+/* Header & Navigation Styling */
+.main-header {
+    background-color: $snav-color;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: $shadow-default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: $primary-color;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: $text-dark;
+    font-weight: 500;
+    transition: $transition-default;
+}
+
+.main-nav li a:hover {
+    color: $primary-color;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    transition: $transition-default;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-hover;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba($secondary-color, 0.1), rgba($primary-color, 0.1));
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero-section .btn-primary {
+    display: inline-block;
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: $transition-default;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: darken($primary-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-hover;
+}
+
+.featured {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: $shadow-default;
+    overflow: hidden;
+    transition: $transition-default;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-hover;
+}
+
+.recipe-card .placeholder-img {
+    height: 200px;
+    background: linear-gradient(45deg, #f0f0f0, #eaeaea);
+}
+
+.card-info {
+    padding: 1.5rem;
+}
+
+.main-footer {
+    background-color: #2d3436;
+    color: #b2bec3;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
