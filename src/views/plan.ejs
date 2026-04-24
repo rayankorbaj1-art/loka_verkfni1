@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fitness Plan - FitFlow AI</title>
+    <link rel="stylesheet" href="/scss/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="app-container">
+        <div class="card">
+            <h2>Your Active Plan</h2>
+            <div id="planContainer"></div>
+            <div class="progress-area">
+                <div id="motivationMessage"></div>
+                <button id="logWorkoutBtn" class="motivation-message">✔️ Log today's workout</button>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+    <script src="/js/fitness.js"></script>
+    <script>
+        // Load stored plan from localStorage if exists
+        const storedPlan = localStorage.getItem('currentPlan');
+        if(storedPlan) displayPlan(JSON.parse(storedPlan));
+    </script>
+</body>
+</html>
