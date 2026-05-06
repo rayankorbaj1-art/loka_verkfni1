@@ -1,17 +1,27 @@
-// variables.scss
-$primary-color: #f6b6b1;
+// variables.scss - Fixed missing variables
+$primary-color: #2b6e4f;
 $secondary-color: #4ecdc4;
-$accent-color: #ff6633;
-$text-dark: #243436;
-$sbox-light: #f5fa1e;
-$sbg-color: #ffd4f4;
+$accent-color: #ffe66d;
+$text-dark: #1e2a3e;
+$text-light: #f5f6fa;
+$bg-color: #f5f7fc;
+$sbg-color: #f5f7fc;        // Added alias
 $snav-color: rgba(255, 255, 255, 0.95);
+$sbox-light: #ffffff;
 
 // Fonts
-$font-primary: "Arial", sans-serif;
-$font-heading: "Outfit", sans-serif;
+$font-primary: 'Inter', sans-serif;
+$font-heading: 'Outfit', sans-serif;
 
 // Shadows & Transitions
 $transition-default: 0.3s ease;
 $shadow-default: 0 4px 6px rgba(0, 0, 0, 0.05);
-$shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+// variables 
+$font-primary: 'Inter', sans-serif;
+$font-heading: 'Outfit', sans-serif;
+$transition-default: 0.3s ease;
+$shadow-default: 0 4px 6px rgba(0, 0, 0, 0.05);
+$shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.1);
+$sbox-light: #ffffff;

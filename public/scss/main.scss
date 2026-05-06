@@ -1,7 +1,3 @@
-// public/scss/main.scss
-@import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,36 +5,158 @@
 }
 
 body {
-    font-family: $font-primary, sans-serif;
-    background-color: $sbg-color;
-    color: $text-dark;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fc;
+    color: #1e2a3e;
     line-height: 1.6;
+}
+
+.app-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.tagline {
+    color: #4a627a;
+    margin-bottom: 2rem;
+    border-left: 4px solid #2b6e4f;
+    padding-left: 1rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.form-grid {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    gap: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-heading, sans-serif;
+.input-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1e2a3e;
 }
 
-/* Header & Navigation Styling */
+select, button {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 60px;
+    border: 1px solid #dce5ef;
+    font-size: 1rem;
+    background: #fff;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: #2b6e4f;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1e5a41;
+}
+
+.week-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.day-card {
+    background: #f9fafc;
+    border-radius: 24px;
+    padding: 1.2rem;
+    border-left: 5px solid;
+}
+
+.day-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.exercise-list {
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}
+
+.exercise-list li {
+    margin-bottom: 0.5rem;
+    list-style-type: circle;
+}
+
+.tip-badge {
+    background: #e8f5e9;
+    border-radius: 30px;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #2b6e4f;
+    display: inline-block;
+}
+
+.progress-area {
+    margin-top: 1.5rem;
+    background: #f0f4f9;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.motivation-message {
+    font-size: 0.9rem;
+    background: #e8f5e9;
+    border-radius: 40px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-link {
+    background: none;
+    border: none;
+    color: #2b6e4f;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .main-header {
-    background-color: $snav-color;
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: $shadow-default;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: $primary-color;
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #2b6e4f;
 }
 
 .main-nav ul {
@@ -49,88 +167,116 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-nav li a {
     text-decoration: none;
-    color: $text-dark;
+    color: #1e2a3e;
     font-weight: 500;
-    transition: $transition-default;
 }
 
 .main-nav li a:hover {
-    color: $primary-color;
+    color: #2b6e4f;
 }
 
-.btn-login {
-    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+.btn-reset {
+    background: #2b6e4f;
     color: white;
     padding: 0.6rem 1.4rem;
     border-radius: 50px;
-    transition: $transition-default;
-}
-
-.btn-login:hover {
-    transform: translateY(-2px);
-    box-shadow: $shadow-hover;
-}
-
-.hero-section {
-    background: linear-gradient(135deg, rgba($secondary-color, 0.1), rgba($primary-color, 0.1));
-    text-align: center;
-    padding: 6rem 1rem;
-}
-
-.hero-section .btn-primary {
-    display: inline-block;
-    background-color: $primary-color;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: $transition-default;
-}
-
-.hero-section .btn-primary:hover {
-    background-color: darken($primary-color, 10%);
-    transform: translateY(-2px);
-    box-shadow: $shadow-hover;
-}
-
-.featured {
-    padding: 4rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.recipe-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: $shadow-default;
-    overflow: hidden;
-    transition: $transition-default;
-}
-
-.recipe-card:hover {
-    transform: translateY(-4px);
-    box-shadow: $shadow-hover;
-}
-
-.recipe-card .placeholder-img {
-    height: 200px;
-    background: linear-gradient(45deg, #f0f0f0, #eaeaea);
-}
-
-.card-info {
-    padding: 1.5rem;
+    border: none;
+    cursor: pointer;
 }
 
 .main-footer {
-    background-color: #2d3436;
+    background-color: #1e2a3e;
     color: #b2bec3;
     text-align: center;
     padding: 2rem;
     margin-top: auto;
+}
+
+/* Pictures for exercises */
+.exercise-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.exercise-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #2b6e4f20, #4ecdc420);
+}
+
+.exercise-text {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #1e2a3e;
+    font-weight: 500;
+}
+
+/* Rest day with picture */
+.rest-day {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f9fafc, #ffffff);
+    border-radius: 16px;
+}
+
+.rest-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Background decoration */
+.day-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.day-card-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    opacity: 0.08;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+/* Responsive design */
+@media (max-width: 680px) {
+    .app-container { 
+        padding: 1rem; 
+    }
+    .day-name { 
+        font-size: 1.1rem; 
+    }
+    .exercise-img { 
+        width: 45px; 
+        height: 45px; 
+    }
+    .rest-img { 
+        width: 45px; 
+        height: 45px; 
+    }
+    .exercise-item {
+        gap: 10px;
+        padding: 8px;
+    }
 }

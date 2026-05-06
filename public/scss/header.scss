@@ -1,10 +1,62 @@
-//_variables.scss
-$primary-color: #ff6b6b;
-$secondary-color: #4ecdc4;
-$accent-color: #ffe66d;
-$text-dark: #2d3436;
-$text-light: #f5f6fa;
-$bg-color: #fdfdfd;
-$nav-bg: rgba(255, 255, 255, 0.9);
+// header.scss - Navigation styles
+.main-header {
+  background-color: $snav-color;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: $shadow-default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-//_fonts
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, $primary-color, adjust-color($primary-color, $lightness: -10%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: $text-dark;
+  font-weight: 500;
+  transition: $transition-default;
+}
+
+.main-nav li a:hover {
+  color: $primary-color;
+}
+
+.btn-login, .btn-reset {
+  background: linear-gradient(135deg, $primary-color, adjust-color($primary-color, $lightness: -10%));
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  transition: $transition-default;
+  border: none;
+  cursor: pointer;
+  font-family: $font-primary;
+}
+
+.btn-login:hover, .btn-reset:hover {
+  transform: translateY(-2px);
+  box-shadow: $shadow-hover;
+}
